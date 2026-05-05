@@ -19,7 +19,7 @@ document.querySelectorAll(".modal-bg").forEach(bg => {
   document.querySelectorAll(".gnb-nav .gnb-item > a").forEach(a => {
     try {
       const href = new URL(a.getAttribute("href") || "", location.href).pathname;
-      if (href === cur || (cur.endsWith("/") && href === cur + "index.html"))
+      if (href === cur || (cur.endsWith("/") && href === cur + "index"))
         a.classList.add("on");
     } catch {}
   });

@@ -19,9 +19,9 @@ function fixPaths(html) {
   if (depth === "./") return html;
   return html
     .replace(/href="board\//g,  `href="${depth}board/`)
-    .replace(/href="((?!https?:|#|\.\.\/)([\w-]+\.html(?:#[\w-]*)?))">/g,
+    .replace(/href="((?!https?:|#|\.\.\/)([\w-]+\(?:#[\w-]*)?))">/g,
              `href="${depth}$1">`)
-    .replace(/href="((?!https?:|#|\.\.\/)([\w-]+\.html(?:#[\w-]*)?))"/g,
+    .replace(/href="((?!https?:|#|\.\.\/)([\w-]+\(?:#[\w-]*)?))"/g,
              `href="${depth}$1"`);
 }
 
@@ -39,7 +39,7 @@ const HEADER_HTML = `<div id="topbar">
 
 <div id="gnb">
   <div class="gnb-inner">
-    <a href="index.html" class="gnb-logo">
+    <a href="index" class="gnb-logo">
       <div class="gnb-logo-icon">⚡</div>
       <div>
         <div class="gnb-logo-name">백야전기용역</div>
@@ -47,31 +47,31 @@ const HEADER_HTML = `<div id="topbar">
       </div>
     </a>
     <nav class="gnb-nav">
-      <div class="gnb-item"><a href="index.html">홈</a></div>
+      <div class="gnb-item"><a href="index">홈</a></div>
       <div class="gnb-item">
-        <a href="about.html">회사소개</a>
+        <a href="about">회사소개</a>
         <div class="gnb-drop">
-          <a href="about.html#intro">회사소개</a>
-          <a href="about.html#history">연혁</a>
-          <a href="about.html#map">찾아오시는 길</a>
+          <a href="about#intro">회사소개</a>
+          <a href="about#history">연혁</a>
+          <a href="about#map">찾아오시는 길</a>
         </div>
       </div>
       <div class="gnb-item">
-        <a href="services.html">사업분야</a>
+        <a href="services">사업분야</a>
         <div class="gnb-drop">
-          <a href="services.html#elec">전기공사 인력</a>
-          <a href="services.html#maint">설비 유지보수</a>
-          <a href="services.html#fire">소방·약전</a>
-          <a href="services.html#daily">일용 인력</a>
+          <a href="services#elec">전기공사 인력</a>
+          <a href="services#maint">설비 유지보수</a>
+          <a href="services#fire">소방·약전</a>
+          <a href="services#daily">일용 인력</a>
         </div>
       </div>
-      <div class="gnb-item"><a href="board/notice.html">공지사항</a></div>
+      <div class="gnb-item"><a href="board/notice">공지사항</a></div>
       <div class="gnb-item">
-        <a href="board/hire.html">게시판</a>
+        <a href="board/hire">게시판</a>
         <div class="gnb-drop">
-          <a href="board/hire.html">구인게시판</a>
-          <a href="board/seek.html">구직게시판</a>
-          <a href="board/free.html">자유게시판</a>
+          <a href="board/hire">구인게시판</a>
+          <a href="board/seek">구직게시판</a>
+          <a href="board/free">자유게시판</a>
         </div>
       </div>
     </nav>
@@ -80,13 +80,13 @@ const HEADER_HTML = `<div id="topbar">
     </div>
   </div>
   <div class="gnb-mobile-nav" id="mobileNav">
-    <a href="index.html">홈</a>
-    <a href="about.html">회사소개</a>
-    <a href="services.html">사업분야</a>
-    <a href="board/notice.html">공지사항</a>
-    <a href="board/hire.html">구인게시판</a>
-    <a href="board/seek.html">구직게시판</a>
-    <a href="board/free.html">자유게시판</a>
+    <a href="index">홈</a>
+    <a href="about">회사소개</a>
+    <a href="services">사업분야</a>
+    <a href="board/notice">공지사항</a>
+    <a href="board/hire">구인게시판</a>
+    <a href="board/seek">구직게시판</a>
+    <a href="board/free">자유게시판</a>
   </div>
 </div>`;
 
@@ -107,13 +107,13 @@ const FOOTER_HTML = `<footer>
     <div>
       <h4>바로가기</h4>
       <ul>
-        <li><a href="index.html">홈</a></li>
-        <li><a href="about.html">회사소개</a></li>
-        <li><a href="services.html">사업분야</a></li>
-        <li><a href="board/notice.html">공지사항</a></li>
-        <li><a href="board/hire.html">구인게시판</a></li>
-        <li><a href="board/seek.html">구직게시판</a></li>
-        <li><a href="board/free.html">자유게시판</a></li>
+        <li><a href="index">홈</a></li>
+        <li><a href="about">회사소개</a></li>
+        <li><a href="services">사업분야</a></li>
+        <li><a href="board/notice">공지사항</a></li>
+        <li><a href="board/hire">구인게시판</a></li>
+        <li><a href="board/seek">구직게시판</a></li>
+        <li><a href="board/free">자유게시판</a></li>
       </ul>
     </div>
     <div>
@@ -170,7 +170,7 @@ function highlightNav() {
   document.querySelectorAll("nav .nav-item > a, .mobile-nav a").forEach(a => {
     try {
       const href = new URL(a.getAttribute("href") || "", location.href).pathname;
-      if (href === cur || (cur.endsWith("/") && href === cur + "index.html"))
+      if (href === cur || (cur.endsWith("/") && href === cur + "index"))
         a.classList.add("on");
     } catch {}
   });

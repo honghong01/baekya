@@ -18,18 +18,18 @@
 
 ```
 theme-x/
-├── index.html          # 홈
-├── about.html          # 회사소개
-├── services.html       # 사업분야
-├── 404.html            # 없는 경로 처리
+├── index          # 홈
+├── about          # 회사소개
+├── services       # 사업분야
+├── 404            # 없는 경로 처리
 ├── board/
-│   ├── notice.html     # 공지사항 (관리자 전용 작성)
-│   ├── hire.html       # 구인게시판
-│   ├── seek.html       # 구직게시판
-│   └── free.html       # 자유게시판
+│   ├── notice     # 공지사항 (관리자 전용 작성)
+│   ├── hire       # 구인게시판
+│   ├── seek       # 구직게시판
+│   └── free       # 자유게시판
 ├── components/
-│   ├── header.html     # 공통 헤더 (fetch로 삽입)
-│   └── footer.html     # 공통 푸터 + 모달
+│   ├── header     # 공통 헤더 (fetch로 삽입)
+│   └── footer     # 공통 푸터 + 모달
 ├── css/
 │   └── style.css       # 전체 스타일
 └── js/
@@ -133,11 +133,11 @@ GitHub 레포 → Settings → Pages → Branch: `main` / `/ (root)` → Save
 
 | 항목 | 변경 위치 |
 |------|-----------|
-| 대표번호 | `components/header.html`, `components/footer.html`, `index.html` |
+| 대표번호 | `components/header`, `components/footer`, `index` |
 | 이메일 | 동일 |
-| 회사명/대표자/주소 등 | `about.html`, `footer.html` |
+| 회사명/대표자/주소 등 | `about`, `footer` |
 | SEO 도메인 | 각 HTML의 `<link rel="canonical">`, `<meta property="og:url">` |
-| 통계 수치 (15년/1200명 등) | `index.html` hero 섹션 |
+| 통계 수치 (15년/1200명 등) | `index` hero 섹션 |
 
 ---
 
@@ -145,15 +145,15 @@ GitHub 레포 → Settings → Pages → Branch: `main` / `/ (root)` → Save
 
 | 페이지 | URL |
 |--------|-----|
-| 홈 | `/index.html` 또는 `/` |
-| 회사소개 | `/about.html` |
-| 사업분야 | `/services.html` |
-| 공지사항 | `/board/notice.html` |
-| 구인게시판 | `/board/hire.html` |
-| 구직게시판 | `/board/seek.html` |
-| 자유게시판 | `/board/free.html` |
-| 게시물 상세 | `/board/hire.html?id=DOCID` |
-| 글쓰기 | `/board/hire.html?mode=write` |
+| 홈 | `/index` 또는 `/` |
+| 회사소개 | `/about` |
+| 사업분야 | `/services` |
+| 공지사항 | `/board/notice` |
+| 구인게시판 | `/board/hire` |
+| 구직게시판 | `/board/seek` |
+| 자유게시판 | `/board/free` |
+| 게시물 상세 | `/board/hire?id=DOCID` |
+| 글쓰기 | `/board/hire?mode=write` |
 
 ---
 

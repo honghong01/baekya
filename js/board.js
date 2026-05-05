@@ -46,7 +46,7 @@ export async function loadTicker(trackId) {
 
     const singleHtml = snap.docs.map(d => {
       const p = d.data();
-      return `<a href="board/notice.html?id=${d.id}">▸ ${esc(p.title)}</a>`;
+      return `<a href="board/notice?id=${d.id}">▸ ${esc(p.title)}</a>`;
     }).join("");
 
     el.style.animation = "none";
@@ -83,7 +83,7 @@ export async function loadPreview(board, elId, tagCls, tagText) {
         ? p.createdAt.toDate().toLocaleDateString("ko-KR", { month: "2-digit", day: "2-digit" }).replace(". ", ".")
         : "";
       const tag = tagText ? `<span class="tag ${tagCls}">${tagText}</span>` : "";
-      return `<li><a href="board/${board}.html?id=${d.id}">${tag}${esc(p.title)}</a><span class="dt">${dt}</span></li>`;
+      return `<li><a href="board/${board}?id=${d.id}">${tag}${esc(p.title)}</a><span class="dt">${dt}</span></li>`;
     }).join("");
   } catch {}
 }
