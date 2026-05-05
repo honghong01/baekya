@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>회사소개 | 백야전기용역</title>
+  <meta name="description" content="백야전기용역 회사소개 — 2009년 설립, 전기인력 알선·공급 전문기업입니다."/>
+  <meta property="og:title" content="회사소개 | 백야전기용역"/>
+  <link rel="canonical" href="https://yourdomain.github.io/about.html"/>
+  <link rel="icon" href="beakya-logo.png"/>
+  <meta property="og:image" content="https://yourdomain.github.io/beakya-logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="topbar">
+  <div class="inner">
+    <div class="contacts">
+      <span>대표번호: 02-2212-1470</span>
+      <span>이메일: bya1470@naver.com</span>
+      <span>평일 09:00~18:00</span>
+    </div>
+    <button class="admin-btn" id="adminBtn" onclick="handleAdminBtn()">관리자</button>
+  </div>
+</div>
+<div id="gnb">
+  <div class="gnb-inner">
+    <a href="index.html" class="gnb-logo">
+      <div class="gnb-logo-icon"><img src="beakya-logo.png" alt="백야전기용역 로고"/></div>
+      <div>
+        <div class="gnb-logo-name">백야전기용역</div>
+        <div class="gnb-logo-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      </div>
+    </a>
+    <nav class="gnb-nav">
+      <div class="gnb-item"><a href="index.html">홈</a></div>
+      <div class="gnb-item">
+        <a href="about.html">회사소개</a>
+        <div class="gnb-drop">
+          <a href="about.html#intro">회사소개</a>
+          <a href="about.html#history">연혁</a>
+          <a href="about.html#map">찾아오시는 길</a>
+        </div>
+      </div>
+      <div class="gnb-item">
+        <a href="services.html">사업분야</a>
+        <div class="gnb-drop">
+          <a href="services.html#elec">전기공사 인력</a>
+          <a href="services.html#maint">설비 유지보수</a>
+          <a href="services.html#fire">소방·약전</a>
+          <a href="services.html#daily">일용 인력</a>
+        </div>
+      </div>
+      <div class="gnb-item"><a href="board/notice.html">공지사항</a></div>
+      <div class="gnb-item">
+        <a href="board/hire.html">게시판</a>
+        <div class="gnb-drop">
+          <a href="board/hire.html">구인게시판</a>
+          <a href="board/seek.html">구직게시판</a>
+          <a href="board/free.html">자유게시판</a>
+        </div>
+      </div>
+    </nav>
+    <div class="gnb-ham" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="gnb-mobile-nav" id="mobileNav">
+    <a href="index.html">홈</a>
+    <a href="about.html">회사소개</a>
+    <a href="services.html">사업분야</a>
+    <a href="board/notice.html">공지사항</a>
+    <a href="board/hire.html">구인게시판</a>
+    <a href="board/seek.html">구직게시판</a>
+    <a href="board/free.html">자유게시판</a>
+  </div>
+</div>
+
+<div class="board-wrap">
+  <div class="board-ttl" id="intro">회사소개</div>
+  <div class="about-grid">
+    <div>
+      <h3>신뢰와 전문성으로 함께하는 백야전기용역</h3>
+      <p>백야전기용역은 2009년 설립 이후 전기공사·설비·소방 분야의 숙련 기술인력 알선·공급 전문기업으로 성장해 왔습니다.</p>
+      <p>현장 특성에 맞는 인력을 신속하고 정확하게 연결하여 공사 현장의 일정 지연과 품질 저하를 최소화하는 것을 최우선 목표로 합니다.</p>
+      <p>당사에 등록된 모든 기술인력은 자격증·경력·안전교육 이수 여부를 사전에 검증하여 관리하고 있습니다.</p>
+      <h3 id="history" style="margin-top:28px">연혁</h3>
+      <table class="history-tbl">
+        <tr><th>연도</th><th>주요 사항</th></tr>
+        <tr><td>2009</td><td>백야전기용역 설립</td></tr>
+        <tr><td>2013</td><td>인력 공급 실적 연 100건 달성</td></tr>
+        <tr><td>2018</td><td>소방·약전 분야 인력 공급 사업 확장</td></tr>
+        <tr><td>2022</td><td>장기용역 계약 부문 신설</td></tr>
+        <tr><td>현재</td><td>누적 현장 350건 이상, 등록 인력 1,200명 이상</td></tr>
+      </table>
+    </div>
+    <div>
+      <table class="info-tbl">
+        <tr><td class="k">회사명</td><td>백야전기용역</td></tr>
+        <tr><td class="k">대표자</td><td>홍길동</td></tr>
+        <tr><td class="k">설립일</td><td>2009년 3월 15일</td></tr>
+        <tr><td class="k">사업자번호</td><td>000-00-00000</td></tr>
+        <tr><td class="k">주소</td><td>서울시 성동구 천호대로 418 302호(원광빌딩)</td></tr>
+        <tr><td class="k">대표번호</td><td>02-2212-1470</td></tr>
+        <tr><td class="k">팩스</td><td>02-2213-1471</td></tr>
+        <tr><td class="k">휴대폰</td><td>010-4496-1470</td></tr>
+        <tr><td class="k">이메일</td><td>bya1470@naver.com</td></tr>
+        <tr><td class="k">주요사업</td><td>전기인력 알선·공급업</td></tr>
+      </table>
+      <div id="map" style="margin-top:18px;background:var(--navy);padding:18px;color:#8899bb;font-size:13px;line-height:2.1;border-left:3px solid var(--yellow)">
+        <div style="color:var(--yellow);font-weight:800;margin-bottom:7px">📍 찾아오시는 길</div>
+        지하철 장한평역 5번 출구 1분거리<br>주소: 서울시 성동구 천호대로 418 302호(원광빌딩)
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="inner">
+    <div>
+      <div class="ft-name">⚡ 백야전기용역</div>
+      <div class="ft-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      <p>주소: 서울시 성동구 천호대로 418 302호(원광빌딩)<br>대표전화: 02-2212-1470 | 팩스: 02-2213-1471<br>휴대폰: 010-4496-1470<br>이메일: bya1470@naver.com</p>
+    </div>
+    <div>
+      <h4>바로가기</h4>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="services.html">사업분야</a></li>
+        <li><a href="board/notice.html">공지사항</a></li>
+        <li><a href="board/hire.html">구인게시판</a></li>
+        <li><a href="board/seek.html">구직게시판</a></li>
+        <li><a href="board/free.html">자유게시판</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>이용안내</h4>
+      <ul>
+        <li>평일 09:00 ~ 18:00</li>
+        <li>점심 12:00 ~ 13:00</li>
+        <li>주말·공휴일 휴무</li>
+        <li>게시판 비회원 작성 가능</li>
+        <li>공지사항은 관리자 전용</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="ft-copy">Copyright © 2025 백야전기용역. All rights reserved.</div>
+<div class="modal-bg" id="modalAdmin">
+  <div class="modal">
+    <h3>🔐 관리자 로그인</h3>
+    <div class="fr"><label>이메일</label><input type="email" id="adminEmail" placeholder="관리자 이메일"></div>
+    <div class="fr"><label>비밀번호</label><input type="password" id="adminPw" placeholder="비밀번호"></div>
+    <p class="err-msg" id="adminErr">이메일 또는 비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-navy" onclick="doAdminLogin()">로그인</button>
+      <button class="btn btn-gray" onclick="closeModal('modalAdmin')">취소</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="modalDel">
+  <div class="modal">
+    <h3>🗑 게시물 삭제</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">작성 시 입력한 비밀번호를 입력하세요.</p>
+    <div class="fr"><label>비밀번호</label><input type="password" id="delPwInput" placeholder="비밀번호"></div>
+    <p class="err-msg" id="delErr">비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-red" onclick="confirmDelete()">삭제</button>
+      <button class="btn btn-gray" onclick="closeModal('modalDel')">취소</button>
+    </div>
+  </div>
+</div>
+
+  <script type="module" src="./js/common.js"></script>
+</body>
+</html>

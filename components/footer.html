@@ -1,0 +1,67 @@
+<!-- components/footer.html -->
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="ft-name">⚡ 백야전기용역</div>
+      <div class="ft-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      <p>
+        사업자등록번호: 000-00-00000<br>
+        대표자: 홍길동 | 설립: 2009년<br>
+        주소: 서울시 성동구 천호대로 418 302호(원광빌딩)<br>
+        대표번호: 02-2212-1470<br>
+        이메일: bya1470@naver.com
+      </p>
+    </div>
+    <div>
+      <h4>바로가기</h4>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="services.html">사업분야</a></li>
+        <li><a href="board/notice.html">공지사항</a></li>
+        <li><a href="board/hire.html">구인게시판</a></li>
+        <li><a href="board/seek.html">구직게시판</a></li>
+        <li><a href="board/free.html">자유게시판</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>이용안내</h4>
+      <ul>
+        <li>평일 09:00 ~ 18:00</li>
+        <li>점심 12:00 ~ 13:00</li>
+        <li>주말·공휴일 휴무</li>
+        <li>게시판 비회원 작성 가능</li>
+        <li>공지사항은 관리자 전용</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="ft-copy">Copyright © 2026 백야전기용역. All rights reserved.</div>
+
+<!-- ADMIN MODAL -->
+<div class="modal-bg" id="modalAdmin">
+  <div class="modal">
+    <h3>🔐 관리자 로그인</h3>
+    <div class="fr"><label>이메일</label><input type="email" id="adminEmail" placeholder="관리자 이메일"></div>
+    <div class="fr"><label>비밀번호</label><input type="password" id="adminPw" placeholder="비밀번호"></div>
+    <p class="err-msg" id="adminErr">이메일 또는 비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-navy" onclick="doAdminLogin()">로그인</button>
+      <button class="btn btn-gray" onclick="closeModal('modalAdmin')">취소</button>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE MODAL -->
+<div class="modal-bg" id="modalDel">
+  <div class="modal">
+    <h3>🗑 게시물 삭제</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">작성 시 입력한 비밀번호를 입력하세요.</p>
+    <div class="fr"><label>비밀번호</label><input type="password" id="delPwInput" placeholder="비밀번호"></div>
+    <p class="err-msg" id="delErr">비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-red" onclick="confirmDelete()">삭제</button>
+      <button class="btn btn-gray" onclick="closeModal('modalDel')">취소</button>
+    </div>
+  </div>
+</div>

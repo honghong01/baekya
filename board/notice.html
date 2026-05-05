@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>공지사항 | 백야전기용역</title>
+  <meta name="description" content="백야전기용역 공지사항 — 최신 공지를 확인하세요."/>
+  <meta property="og:title" content="공지사항 | 백야전기용역"/>
+  <link rel="canonical" href="https://yourdomain.github.io/board/notice.html"/>
+  <link rel="icon" href="../beakya-logo.png"/>
+  <meta property="og:image" content="https://yourdomain.github.io/beakya-logo.png"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<div id="topbar">
+  <div class="inner">
+    <div class="contacts">
+      <span>대표번호: 02-2212-1470</span>
+      <span>이메일: bya1470@naver.com</span>
+      <span>평일 09:00~18:00</span>
+    </div>
+    <button class="admin-btn" id="adminBtn" onclick="handleAdminBtn()">관리자</button>
+  </div>
+</div>
+<div id="gnb">
+  <div class="gnb-inner">
+    <a href="../index.html" class="gnb-logo">
+      <div class="gnb-logo-icon"><img src="../beakya-logo.png" alt="백야전기용역 로고"/></div>
+      <div>
+        <div class="gnb-logo-name">백야전기용역</div>
+        <div class="gnb-logo-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      </div>
+    </a>
+    <nav class="gnb-nav">
+      <div class="gnb-item"><a href="../index.html">홈</a></div>
+      <div class="gnb-item">
+        <a href="../about.html">회사소개</a>
+        <div class="gnb-drop">
+          <a href="../about.html#intro">회사소개</a>
+          <a href="../about.html#history">연혁</a>
+          <a href="../about.html#map">찾아오시는 길</a>
+        </div>
+      </div>
+      <div class="gnb-item">
+        <a href="../services.html">사업분야</a>
+        <div class="gnb-drop">
+          <a href="../services.html#elec">전기공사 인력</a>
+          <a href="../services.html#maint">설비 유지보수</a>
+          <a href="../services.html#fire">소방·약전</a>
+          <a href="../services.html#daily">일용 인력</a>
+        </div>
+      </div>
+      <div class="gnb-item"><a href="../board/notice.html">공지사항</a></div>
+      <div class="gnb-item">
+        <a href="../board/hire.html">게시판</a>
+        <div class="gnb-drop">
+          <a href="../board/hire.html">구인게시판</a>
+          <a href="../board/seek.html">구직게시판</a>
+          <a href="../board/free.html">자유게시판</a>
+        </div>
+      </div>
+    </nav>
+    <div class="gnb-ham" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="gnb-mobile-nav" id="mobileNav">
+    <a href="../index.html">홈</a>
+    <a href="../about.html">회사소개</a>
+    <a href="../services.html">사업분야</a>
+    <a href="../board/notice.html">공지사항</a>
+    <a href="../board/hire.html">구인게시판</a>
+    <a href="../board/seek.html">구직게시판</a>
+    <a href="../board/free.html">자유게시판</a>
+  </div>
+</div>
+
+<div class="board-wrap">
+  <div class="board-ttl">📢 공지사항</div>
+  <div id="boardWrap"><p style="padding:40px;text-align:center;color:#aaa">불러오는 중...</p></div>
+</div>
+<footer>
+  <div class="inner">
+    <div>
+      <div class="ft-name">⚡ 백야전기용역</div>
+      <div class="ft-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      <p>주소: 서울시 성동구 천호대로 418 302호(원광빌딩)<br>대표전화: 02-2212-1470 | 팩스: 02-2213-1471<br>휴대폰: 010-4496-1470<br>이메일: bya1470@naver.com</p>
+    </div>
+    <div>
+      <h4>바로가기</h4>
+      <ul>
+        <li><a href="../index.html">홈</a></li>
+        <li><a href="../about.html">회사소개</a></li>
+        <li><a href="../services.html">사업분야</a></li>
+        <li><a href="../board/notice.html">공지사항</a></li>
+        <li><a href="../board/hire.html">구인게시판</a></li>
+        <li><a href="../board/seek.html">구직게시판</a></li>
+        <li><a href="../board/free.html">자유게시판</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>이용안내</h4>
+      <ul>
+        <li>평일 09:00 ~ 18:00</li>
+        <li>점심 12:00 ~ 13:00</li>
+        <li>주말·공휴일 휴무</li>
+        <li>게시판 비회원 작성 가능</li>
+        <li>공지사항은 관리자 전용</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="ft-copy">Copyright © 2025 백야전기용역. All rights reserved.</div>
+<div class="modal-bg" id="modalAdmin">
+  <div class="modal">
+    <h3>🔐 관리자 로그인</h3>
+    <div class="fr"><label>이메일</label><input type="email" id="adminEmail" placeholder="관리자 이메일"></div>
+    <div class="fr"><label>비밀번호</label><input type="password" id="adminPw" placeholder="비밀번호"></div>
+    <p class="err-msg" id="adminErr">이메일 또는 비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-navy" onclick="doAdminLogin()">로그인</button>
+      <button class="btn btn-gray" onclick="closeModal('modalAdmin')">취소</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="modalDel">
+  <div class="modal">
+    <h3>🗑 게시물 삭제</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">작성 시 입력한 비밀번호를 입력하세요.</p>
+    <div class="fr"><label>비밀번호</label><input type="password" id="delPwInput" placeholder="비밀번호"></div>
+    <p class="err-msg" id="delErr">비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-red" onclick="confirmDelete()">삭제</button>
+      <button class="btn btn-gray" onclick="closeModal('modalDel')">취소</button>
+    </div>
+  </div>
+</div>
+
+  <script type="module">
+    import '../js/common.js';
+    import { initBoard } from '../js/board.js';
+    initBoard('notice');
+  </script>
+</body>
+</html>

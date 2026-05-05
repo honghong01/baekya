@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>백야전기용역 — 전기인력 전문 알선</title>
+  <meta name="description" content="백야전기용역은 전기공사·설비·소방 분야 숙련 기술인력을 신속하게 공급하는 전문 알선 기업입니다."/>
+  <meta name="keywords" content="전기인력,전기용역,전기기사,구인구직,전기공사인력,소방전기"/>
+  <meta property="og:title" content="백야전기용역 — 전기인력 전문 알선"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://yourdomain.github.io/index.html"/>
+  <link rel="icon" href="beakya-logo.png"/>
+  <meta property="og:image" content="https://yourdomain.github.io/beakya-logo.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="topbar">
+  <div class="inner">
+    <div class="contacts">
+      <span>대표번호: 02-2212-1470</span>
+      <span>이메일: bya1470@naver.com</span>
+      <span>평일 09:00~18:00</span>
+    </div>
+    <button class="admin-btn" id="adminBtn" onclick="handleAdminBtn()">관리자</button>
+  </div>
+</div>
+<div id="gnb">
+  <div class="gnb-inner">
+    <a href="index.html" class="gnb-logo">
+      <div class="gnb-logo-icon"><img src="beakya-logo.png" alt="백야전기용역 로고"/></div>
+      <div>
+        <div class="gnb-logo-name">백야전기용역</div>
+        <div class="gnb-logo-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      </div>
+    </a>
+    <nav class="gnb-nav">
+      <div class="gnb-item"><a href="index.html">홈</a></div>
+      <div class="gnb-item">
+        <a href="about.html">회사소개</a>
+        <div class="gnb-drop">
+          <a href="about.html#intro">회사소개</a>
+          <a href="about.html#history">연혁</a>
+          <a href="about.html#map">찾아오시는 길</a>
+        </div>
+      </div>
+      <div class="gnb-item">
+        <a href="services.html">사업분야</a>
+        <div class="gnb-drop">
+          <a href="services.html#elec">전기공사 인력</a>
+          <a href="services.html#maint">설비 유지보수</a>
+          <a href="services.html#fire">소방·약전</a>
+          <a href="services.html#daily">일용 인력</a>
+        </div>
+      </div>
+      <div class="gnb-item"><a href="board/notice.html">공지사항</a></div>
+      <div class="gnb-item">
+        <a href="board/hire.html">게시판</a>
+        <div class="gnb-drop">
+          <a href="board/hire.html">구인게시판</a>
+          <a href="board/seek.html">구직게시판</a>
+          <a href="board/free.html">자유게시판</a>
+        </div>
+      </div>
+    </nav>
+    <div class="gnb-ham" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="gnb-mobile-nav" id="mobileNav">
+    <a href="index.html">홈</a>
+    <a href="about.html">회사소개</a>
+    <a href="services.html">사업분야</a>
+    <a href="board/notice.html">공지사항</a>
+    <a href="board/hire.html">구인게시판</a>
+    <a href="board/seek.html">구직게시판</a>
+    <a href="board/free.html">자유게시판</a>
+  </div>
+</div>
+
+
+<div id="ticker">
+  <div class="inner">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+</div>
+
+<section id="hero">
+  <div class="inner">
+    <div class="hero-txt">
+      <div class="hero-badge">전기인력 전문 알선기업</div>
+      <h1>믿을 수 있는<br><em>전기 전문 인력</em>을<br>신속하게 공급합니다</h1>
+      <p class="hero-desc">백야전기용역은 전기공사·설비·소방 분야의<br>숙련 기술인력을 체계적으로 관리·공급하는<br>전문 용역 알선 기업입니다.</p>
+      <div class="hero-btns">
+        <a href="board/hire.html" class="btn-pri">구인 등록하기</a>
+        <a href="board/seek.html" class="btn-sec">구직 등록하기</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">1,200+</div><div class="l">등록 기술인력</div></div>
+      <div class="stat"><div class="n">350+</div><div class="l">완료 현장</div></div>
+      <div class="stat"><div class="n">15년</div><div class="l">업력</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg)">
+  <div class="inner">
+    <div class="sec-title"><h2>사업분야</h2><p>다양한 전기·설비 분야의 전문 인력을 적시에 공급합니다</p><div class="divider"></div></div>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="ico">🔌</div><h3>전기공사 인력 공급</h3><p>아파트·상업시설·공장 등 각종 현장의 전기기사·기능사·조공 인력을 공급합니다.</p></div>
+      <div class="svc-card"><div class="ico">🏭</div><h3>설비 유지보수 인력</h3><p>수변전 설비, 발전기, UPS 등 전기설비 유지보수 및 점검 전담 인력을 공급합니다.</p></div>
+      <div class="svc-card"><div class="ico">🚒</div><h3>소방·약전 인력</h3><p>소방전기, 약전(통신·방재·보안) 분야 면허 보유 기술자를 현장 요건에 맞춰 연결합니다.</p></div>
+      <div class="svc-card"><div class="ico">🪜</div><h3>일용 현장 인력</h3><p>전기공사 현장 보조·잡부 인력부터 자재운반·정리까지 신속하게 공급합니다.</p></div>
+      <div class="svc-card"><div class="ico">📋</div><h3>감리·관리 인력</h3><p>전기공사 현장 감리원, 안전관리자, 현장소장 등 관리직 인력을 경력 검증 후 연결합니다.</p></div>
+      <div class="svc-card"><div class="ico">🤝</div><h3>장기 용역 계약</h3><p>건물 위탁관리·공장 상주 인력 등 월정액 기반 장기 인력 공급 계약도 가능합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="proc-wrap">
+  <div class="sec-title" style="margin-bottom:24px"><h2 style="color:var(--white)">이용안내</h2><p style="color:#7a8eaa">구인·구직 모두 간단한 절차로 진행됩니다</p><div class="divider"></div></div>
+  <div class="proc-steps">
+    <div class="proc-step"><div class="proc-num">1</div><h4>게시판 등록</h4><p>구인 또는 구직 게시판에 상세 내용을 작성합니다</p></div>
+    <div class="proc-step"><div class="proc-num">2</div><h4>담당자 확인</h4><p>게시 내용을 확인한 담당자가 연락을 드립니다</p></div>
+    <div class="proc-step"><div class="proc-num">3</div><h4>매칭 협의</h4><p>조건 및 일정을 조율하고 적합한 인력을 매칭합니다</p></div>
+    <div class="proc-step"><div class="proc-num">4</div><h4>현장 투입</h4><p>계약 완료 후 현장에 인력이 투입됩니다</p></div>
+  </div>
+</div>
+
+<section class="section" style="background:var(--white);border-top:1px solid var(--border)">
+  <div class="inner">
+    <div class="sec-title"><h2>게시판</h2><p>구인·구직 및 공지사항을 확인하세요</p><div class="divider"></div></div>
+    <div class="boards-grid">
+      <div class="bw"><div class="bw-head"><h3>📢 공지사항</h3><a href="board/notice.html">더보기 ›</a></div><ul class="bw-list" id="preview-notice"><li><span style="color:#aaa">불러오는 중...</span></li></ul></div>
+      <div class="bw"><div class="bw-head"><h3>🏗 구인게시판</h3><a href="board/hire.html">더보기 ›</a></div><ul class="bw-list" id="preview-hire"><li><span style="color:#aaa">불러오는 중...</span></li></ul></div>
+      <div class="bw"><div class="bw-head"><h3>👷 구직게시판</h3><a href="board/seek.html">더보기 ›</a></div><ul class="bw-list" id="preview-seek"><li><span style="color:#aaa">불러오는 중...</span></li></ul></div>
+      <div class="bw"><div class="bw-head"><h3>💬 자유게시판</h3><a href="board/free.html">더보기 ›</a></div><ul class="bw-list" id="preview-free"><li><span style="color:#aaa">불러오는 중...</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="inner">
+    <div>
+      <div class="ft-name">⚡ 백야전기용역</div>
+      <div class="ft-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
+      <p>주소: 서울시 성동구 천호대로 418 302호(원광빌딩)<br>대표전화: 02-2212-1470 | 팩스: 02-2213-1471<br>휴대폰: 010-4496-1470<br>이메일: bya1470@naver.com</p>
+    </div>
+    <div>
+      <h4>바로가기</h4>
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="about.html">회사소개</a></li>
+        <li><a href="services.html">사업분야</a></li>
+        <li><a href="board/notice.html">공지사항</a></li>
+        <li><a href="board/hire.html">구인게시판</a></li>
+        <li><a href="board/seek.html">구직게시판</a></li>
+        <li><a href="board/free.html">자유게시판</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>이용안내</h4>
+      <ul>
+        <li>평일 09:00 ~ 18:00</li>
+        <li>점심 12:00 ~ 13:00</li>
+        <li>주말·공휴일 휴무</li>
+        <li>게시판 비회원 작성 가능</li>
+        <li>공지사항은 관리자 전용</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<div class="ft-copy">Copyright © 2025 백야전기용역. All rights reserved.</div>
+<div class="modal-bg" id="modalAdmin">
+  <div class="modal">
+    <h3>🔐 관리자 로그인</h3>
+    <div class="fr"><label>이메일</label><input type="email" id="adminEmail" placeholder="관리자 이메일"></div>
+    <div class="fr"><label>비밀번호</label><input type="password" id="adminPw" placeholder="비밀번호"></div>
+    <p class="err-msg" id="adminErr">이메일 또는 비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-navy" onclick="doAdminLogin()">로그인</button>
+      <button class="btn btn-gray" onclick="closeModal('modalAdmin')">취소</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="modalDel">
+  <div class="modal">
+    <h3>🗑 게시물 삭제</h3>
+    <p style="font-size:13px;color:#666;margin-bottom:14px">작성 시 입력한 비밀번호를 입력하세요.</p>
+    <div class="fr"><label>비밀번호</label><input type="password" id="delPwInput" placeholder="비밀번호"></div>
+    <p class="err-msg" id="delErr">비밀번호가 틀렸습니다.</p>
+    <div class="form-btns">
+      <button class="btn btn-red" onclick="confirmDelete()">삭제</button>
+      <button class="btn btn-gray" onclick="closeModal('modalDel')">취소</button>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module">
+    import './js/common.js';
+    import { loadPreview, loadTicker } from './js/board.js';
+    loadTicker('tickerTrack');
+    loadPreview('notice', 'preview-notice', 'tag-n', '공지');
+    loadPreview('hire',   'preview-hire',   'tag-h', '구인');
+    loadPreview('seek',   'preview-seek',   'tag-s', '구직');
+    loadPreview('free',   'preview-free',   '',      '');
+  </script>
+</body>
+</html>
