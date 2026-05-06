@@ -233,9 +233,63 @@ window.resetSearch = function () {
 
 // ── 상세 보기 ─────────────────────────────────────────
 async function renderView(postId) {
+  if (boardName === "seek" && !window.__isAdmin) {
+    renderSeekGate(postId);
+    return;
+  }
+  await _loadAndRenderPost(postId);
+}
+
+function renderSeekGate(postId) {
+  const wrap = document.getElementById("boardWrap");
+  wrap.innerHTML = `
+    <div class="write-box">
+      <p style="font-size:14px;color:#555;margin-bottom:18px">
+        구직게시판 상세는 작성자 본인 또는 관리자만 조회할 수 있습니다.<br>
+        게시물 등록 시 입력한 비밀번호를 입력해주세요.
+      </p>
+      <div class="fr">
+        <label>비밀번호</label>
+        <input type="password" id="seekViewPw" placeholder="게시물 비밀번호" style="max-width:200px">
+      </div>
+      <p class="err-msg" id="seekViewErr" style="display:none">비밀번호가 틀렸습니다.</p>
+      <div class="form-btns">
+        <button class="btn btn-navy" onclick="confirmSeekView('${postId}')">확인</button>
+        <button class="btn btn-gray" onclick="location.href=location.pathname">목록으로</button>
+      </div>
+    </div>`;
+  setTimeout(() => {
+    document.getElementById("seekViewPw")?.addEventListener("keydown", e => {
+      if (e.key === "Enter") window.confirmSeekView(postId);
+    });
+  }, 0);
+}
+
+window.confirmSeekView = async function (postId) {
+  const pw    = document.getElementById("seekViewPw")?.value || "";
+  const errEl = document.getElementById("seekViewErr");
+  if (errEl) errEl.style.display = "none";
+  try {
+    const ref  = doc(db, boardName, postId);
+    const snap = await getDoc(ref);
+    if (!snap.exists() || snap.data().password !== pw) {
+      if (errEl) errEl.style.display = "block";
+      return;
+    }
+    const p = { id: snap.id, ...snap.data() };
+    if (!viewIncremented) {
+      viewIncremented = true;
+      updateDoc(ref, { views: increment(1) }).catch(() => {});
+    }
+    _renderPostContent(p);
+  } catch (e) {
+    alert("오류: " + e.message);
+  }
+};
+
+async function _loadAndRenderPost(postId) {
   const wrap = document.getElementById("boardWrap");
   wrap.innerHTML = '<p style="padding:40px;text-align:center;color:#aaa">불러오는 중...</p>';
-
   try {
     const ref  = doc(db, boardName, postId);
     const snap = await getDoc(ref);
@@ -244,38 +298,41 @@ async function renderView(postId) {
       return;
     }
     const p = { id: snap.id, ...snap.data() };
-
     if (!viewIncremented) {
       viewIncremented = true;
       updateDoc(ref, { views: increment(1) }).catch(() => {});
     }
-
-    const isAdmin  = window.__isAdmin;
-    const canDel   = isAdmin || boardName !== "notice";
-    const canEdit  = isAdmin && boardName === "notice";
-    const canWrite = boardName !== "notice" || isAdmin;
-
-    wrap.innerHTML = `
-      <div class="post-box">
-        <div class="post-hd">
-          <h2>${esc(p.title)}</h2>
-          <div class="post-meta">
-            <span>작성자: ${esc(p.author || "익명")}</span>
-            <span>날짜: ${fmtDate(p.createdAt)}</span>
-            <span>조회: ${(p.views || 0) + 1}</span>
-          </div>
-        </div>
-        <div class="post-body">${esc(p.content)}</div>
-        <div class="post-ft">
-          <button class="btn btn-gray btn-sm" onclick="location.href=location.pathname">목록</button>
-          ${canEdit  ? `<button class="btn btn-yel  btn-sm" onclick="goEdit('${p.id}')">수정</button>` : ""}
-          ${canDel   ? `<button class="btn btn-red  btn-sm" onclick="openDelModal('${p.id}')">삭제</button>` : ""}
-          ${canWrite ? `<button class="btn btn-navy btn-sm" onclick="goWrite()">글쓰기</button>` : ""}
-        </div>
-      </div>`;
+    _renderPostContent(p);
   } catch (e) {
     wrap.innerHTML = `<p style="padding:30px;color:#c00">불러오기 실패: ${e.message}</p>`;
   }
+}
+
+function _renderPostContent(p) {
+  const wrap     = document.getElementById("boardWrap");
+  const isAdmin  = window.__isAdmin;
+  const canDel   = isAdmin || boardName !== "notice";
+  const canEdit  = isAdmin && boardName === "notice";
+  const canWrite = boardName !== "notice" || isAdmin;
+
+  wrap.innerHTML = `
+    <div class="post-box">
+      <div class="post-hd">
+        <h2>${esc(p.title)}</h2>
+        <div class="post-meta">
+          <span>작성자: ${esc(p.author || "익명")}</span>
+          <span>날짜: ${fmtDate(p.createdAt)}</span>
+          <span>조회: ${(p.views || 0) + 1}</span>
+        </div>
+      </div>
+      <div class="post-body">${esc(p.content)}</div>
+      <div class="post-ft">
+        <button class="btn btn-gray btn-sm" onclick="location.href=location.pathname">목록</button>
+        ${canEdit  ? `<button class="btn btn-yel  btn-sm" onclick="goEdit('${p.id}')">수정</button>` : ""}
+        ${canDel   ? `<button class="btn btn-red  btn-sm" onclick="openDelModal('${p.id}')">삭제</button>` : ""}
+        ${canWrite ? `<button class="btn btn-navy btn-sm" onclick="goWrite()">글쓰기</button>` : ""}
+      </div>
+    </div>`;
 }
 
 // ── 수정 폼 (공지 관리자 전용) ────────────────────────

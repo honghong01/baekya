@@ -398,7 +398,8 @@ button{cursor:pointer;font-family:var(--font)}
 ══════════════════════════════════════ */
 footer{background:#1e1e1e;color:#888;padding:40px 24px;border-top:3px solid var(--yellow)}
 footer .inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
-.ft-name{font-size:17px;font-weight:800;color:var(--white);margin-bottom:2px}
+.ft-name{font-size:17px;font-weight:800;color:var(--white);margin-bottom:2px;display:flex;align-items:center;gap:8px}
+.ft-name img{width:28px;height:28px;object-fit:contain;flex-shrink:0}
 .ft-sub{font-size:10px;color:#555;letter-spacing:1px;margin-bottom:12px}
 footer p{font-size:12px;line-height:2.1}
 footer h4{font-size:13px;font-weight:800;color:var(--white);margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid #333}
@@ -406,6 +407,9 @@ footer ul li{font-size:12px;margin-bottom:5px;padding-left:10px;position:relativ
 footer ul li::before{content:'-';position:absolute;left:0}
 footer ul li a:hover{color:var(--yellow)}
 .ft-copy{background:#111;color:#444;text-align:center;padding:11px 20px;font-size:12px}
+
+#map{max-width:66.666%;margin-left:auto;margin-right:auto}
+#imgMap{max-width:100%;height:auto}
 
 /* ══════════════════════════════════════
    반응형
@@ -436,4 +440,6 @@ footer ul li a:hover{color:var(--yellow)}
   .tbl th:nth-child(3),.tbl td:nth-child(3),
   .tbl th:nth-child(4),.tbl td:nth-child(4),
   .tbl th:nth-child(5),.tbl td:nth-child(5){display:none}
+  #map{max-width:100%}
+  #imgMap{max-width:100%}
 }

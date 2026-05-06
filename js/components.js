@@ -29,9 +29,9 @@ function fixPaths(html) {
 const HEADER_HTML = `<div id="topbar">
   <div class="inner">
     <div class="contacts">
-      <span>대표번호: 010-0000-0000</span>
+      <span>대표번호: 02-2212-1470</span>
       <span>이메일: baekya@example.com</span>
-      <span>평일 09:00~18:00</span>
+      <span>24시간</span>
     </div>
     <button class="admin-btn" id="adminBtn" onclick="handleAdminBtn()">관리자</button>
   </div>
@@ -42,7 +42,7 @@ const HEADER_HTML = `<div id="topbar">
     <a href="index" class="gnb-logo">
       <div class="gnb-logo-icon">⚡</div>
       <div>
-        <div class="gnb-logo-name">백야전기용역</div>
+        <div class="gnb-logo-name">백야전기인력</div>
         <div class="gnb-logo-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
       </div>
     </a>
@@ -52,7 +52,6 @@ const HEADER_HTML = `<div id="topbar">
         <a href="about">회사소개</a>
         <div class="gnb-drop">
           <a href="about#intro">회사소개</a>
-          <a href="about#history">연혁</a>
           <a href="about#map">찾아오시는 길</a>
         </div>
       </div>
@@ -94,13 +93,13 @@ const HEADER_HTML = `<div id="topbar">
 const FOOTER_HTML = `<footer>
   <div class="wrap">
     <div>
-      <div class="ft-name">⚡ 백야전기용역</div>
+      <div class="ft-name">백야전기인력</div>
       <div class="ft-sub">BAEKYA ELECTRIC MANPOWER SERVICE</div>
       <p>
         사업자등록번호: 000-00-00000<br>
-        대표자: 홍길동 | 설립: 2009년<br>
+        직업소개등록번호: 2026-3030135-14-5-00002호<br>
         주소: 서울특별시 OO구 OO로 00<br>
-        대표번호: 010-0000-0000<br>
+        대표번호: 02-2212-1470<br>
         이메일: baekya@example.com
       </p>
     </div>
@@ -119,16 +118,14 @@ const FOOTER_HTML = `<footer>
     <div>
       <h4>이용안내</h4>
       <ul>
-        <li>평일 09:00 ~ 18:00</li>
-        <li>점심 12:00 ~ 13:00</li>
-        <li>주말·공휴일 휴무</li>
+        <li>24시간</li>
         <li>게시판 비회원 작성 가능</li>
         <li>공지사항은 관리자 전용</li>
       </ul>
     </div>
   </div>
 </footer>
-<div class="ft-copy">Copyright © 2025 백야전기용역. All rights reserved.</div>
+<div class="ft-copy">Copyright © 2025 백야전기인력. All rights reserved.</div>
 
 
 <div class="modal-bg" id="modalAdmin">
