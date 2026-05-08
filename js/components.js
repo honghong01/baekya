@@ -30,8 +30,9 @@ const HEADER_HTML = `<div id="topbar">
   <div class="inner">
     <div class="contacts">
       <span>대표번호: 02-2212-1470</span>
+      <span>휴대폰: 010-4496-1470</span>
       <span>이메일: baekya@example.com</span>
-      <span>24시간</span>
+      <span>24시간 상담가능</span>
     </div>
     <button class="admin-btn" id="adminBtn" onclick="handleAdminBtn()">관리자</button>
   </div>
@@ -69,7 +70,7 @@ const HEADER_HTML = `<div id="topbar">
         <a href="board/hire">게시판</a>
         <div class="gnb-drop">
           <a href="board/hire">구인게시판</a>
-          <a href="board/seek">구직게시판</a>
+          <a href="https://forms.gle/jNWDwzVnz3oYfKhf7">구직신청서</a>
           <a href="board/free">자유게시판</a>
         </div>
       </div>
@@ -84,7 +85,7 @@ const HEADER_HTML = `<div id="topbar">
     <a href="services">사업분야</a>
     <a href="board/notice">공지사항</a>
     <a href="board/hire">구인게시판</a>
-    <a href="board/seek">구직게시판</a>
+    <a href="https://forms.gle/jNWDwzVnz3oYfKhf7">구직신청서</a>
     <a href="board/free">자유게시판</a>
   </div>
 </div>`;
@@ -111,14 +112,14 @@ const FOOTER_HTML = `<footer>
         <li><a href="services">사업분야</a></li>
         <li><a href="board/notice">공지사항</a></li>
         <li><a href="board/hire">구인게시판</a></li>
-        <li><a href="board/seek">구직게시판</a></li>
+        <li><a href="https://forms.gle/jNWDwzVnz3oYfKhf7">구직신청서</a></li>
         <li><a href="board/free">자유게시판</a></li>
       </ul>
     </div>
     <div>
       <h4>이용안내</h4>
       <ul>
-        <li>24시간</li>
+        <li>24시간 상담가능</li>
         <li>게시판 비회원 작성 가능</li>
         <li>공지사항은 관리자 전용</li>
       </ul>

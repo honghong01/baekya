@@ -25,7 +25,7 @@ theme-x/
 ├── board/
 │   ├── notice     # 공지사항 (관리자 전용 작성)
 │   ├── hire       # 구인게시판
-│   ├── seek       # 구직게시판
+│   ├── seek       # 구직신청서
 │   └── free       # 자유게시판
 ├── components/
 │   ├── header     # 공통 헤더 (fetch로 삽입)
@@ -150,7 +150,7 @@ GitHub 레포 → Settings → Pages → Branch: `main` / `/ (root)` → Save
 | 사업분야 | `/services` |
 | 공지사항 | `/board/notice` |
 | 구인게시판 | `/board/hire` |
-| 구직게시판 | `/board/seek` |
+| 구직신청서 | `/https://forms.gle/jNWDwzVnz3oYfKhf7` |
 | 자유게시판 | `/board/free` |
 | 게시물 상세 | `/board/hire?id=DOCID` |
 | 글쓰기 | `/board/hire?mode=write` |

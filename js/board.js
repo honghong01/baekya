@@ -245,7 +245,7 @@ function renderSeekGate(postId) {
   wrap.innerHTML = `
     <div class="write-box">
       <p style="font-size:14px;color:#555;margin-bottom:18px">
-        구직게시판 상세는 작성자 본인 또는 관리자만 조회할 수 있습니다.<br>
+        구직신청서 상세는 작성자 본인 또는 관리자만 조회할 수 있습니다.<br>
         게시물 등록 시 입력한 비밀번호를 입력해주세요.
       </p>
       <div class="fr">
