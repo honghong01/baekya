@@ -150,7 +150,7 @@ GitHub 레포 → Settings → Pages → Branch: `main` / `/ (root)` → Save
 | 사업분야 | `/services` |
 | 공지사항 | `/board/notice` |
 | 구인게시판 | `/board/hire` |
-| 구직신청서 | `/https://forms.gle/jNWDwzVnz3oYfKhf7` |
+| 구직신청서 | `/https://forms.gle/JnhP6JMD68wJKG246` |
 | 자유게시판 | `/board/free` |
 | 게시물 상세 | `/board/hire?id=DOCID` |
 | 글쓰기 | `/board/hire?mode=write` |

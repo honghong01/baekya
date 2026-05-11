@@ -70,7 +70,7 @@ const HEADER_HTML = `<div id="topbar">
         <a href="board/hire">게시판</a>
         <div class="gnb-drop">
           <a href="board/hire">구인게시판</a>
-          <a href="https://forms.gle/jNWDwzVnz3oYfKhf7">구직신청서</a>
+          <a href="https://forms.gle/JnhP6JMD68wJKG246">구직신청서</a>
           <a href="board/free">자유게시판</a>
         </div>
       </div>
@@ -85,7 +85,7 @@ const HEADER_HTML = `<div id="topbar">
     <a href="services">사업분야</a>
     <a href="board/notice">공지사항</a>
     <a href="board/hire">구인게시판</a>
-    <a href="https://forms.gle/jNWDwzVnz3oYfKhf7">구직신청서</a>
+    <a href="https://forms.gle/JnhP6JMD68wJKG246">구직신청서</a>
     <a href="board/free">자유게시판</a>
   </div>
 </div>`;
@@ -112,7 +112,7 @@ const FOOTER_HTML = `<footer>
         <li><a href="services">사업분야</a></li>
         <li><a href="board/notice">공지사항</a></li>
         <li><a href="board/hire">구인게시판</a></li>
-        <li><a href="https://forms.gle/jNWDwzVnz3oYfKhf7">구직신청서</a></li>
+        <li><a href="https://forms.gle/JnhP6JMD68wJKG246">구직신청서</a></li>
         <li><a href="board/free">자유게시판</a></li>
       </ul>
     </div>
