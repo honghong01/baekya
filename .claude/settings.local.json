@@ -4,7 +4,9 @@
       "Bash(python3 -)",
       "Bash(python3 -c \"import encodings.idna; print\\('xn--' + encodings.idna.ToASCII\\('백야전기인력'\\).decode\\(\\)\\)\")",
       "Bash(python3 -c ' *)",
-      "Bash(xargs sed -i '' 's|https://백야전기인력\\\\.com|https://xn--ok0bw2q0kd5tmvoc7xa.com|g')"
+      "Bash(xargs sed -i '' 's|https://백야전기인력\\\\.com|https://xn--ok0bw2q0kd5tmvoc7xa.com|g')",
+      "Bash(python3)",
+      "Bash(xargs sed -i '' 's|href=\"https://forms.gle/CSUyQMa4xkFU2qcT7\">구직신청서|href=\"https://forms.gle/CSUyQMa4xkFU2qcT7\" data-seek-form>구직신청서|g')"
     ]
   }
 }
